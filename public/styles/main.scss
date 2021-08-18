@@ -1,0 +1,290 @@
+/* @import "/public/styles/login.css";
+@import "/public/styles/footer.css";
+*/
+
+/*Nav*/
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+/*title-main*/
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
+
+/*intro*/
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@1,300&display=swap');
+
+/*btn*/
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Crimson+Pro:ital,wght@1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: { 
+        color:#FBFBFB
+    };
+    height: max-content;
+}
+
+/*========================================================================================================================/
+/=========================================================================================================================/
+/========================================================================================================================*/
+
+
+#nav{
+    position:relative;
+    height: 7vh;
+    background-color: rgba(0, 0, 0, 0.9);
+    ul{
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        justify: {
+            content: space-evenly;
+        }
+        align: {
+            items: center;
+        }
+        li {
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: #FFF;
+            }
+            transition: ease 300ms;
+        }
+
+        li:hover {
+            transform: scale(2);
+            transition: ease 300ms;
+        }
+    }
+    // transition: cubic-bezier(0,1.21,.85,.47) 1400ms;
+    z-index: 100;
+}
+.toggle{
+    display: none;
+    
+}
+
+#bg-presentation{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    
+    .bg-res{
+        display: none;
+    }
+
+    .bg-not{
+        position: relative;
+        width: 100%;
+        background-size:auto;
+        height: 100vh;
+    }
+
+    .line-1{
+        position: relative;
+        top: -55%; 
+        width: 6em;
+        margin: 0 auto;
+        border-right: 2px solid rgba(0, 0, 0, 0.75);
+        font-size: 370%;
+        text-align: center;
+        white-space: nowrap;
+        overflow: hidden;
+        font-family: 'Satisfy', cursive;
+    }
+    
+    .anim-typewriter{width:0;}
+
+    .btn-redirect{
+        position: relative;
+        top: -50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        
+        p{
+            margin-bottom: 20px;
+            font-family: 'Crimson Pro', serif;
+            font-size: 2rem;
+        }
+        
+        .buttons{
+            display: flex;
+            flex-direction: row;
+        }
+
+        .btn{
+            width: max-content;
+            margin: 0 auto;
+            height: max-content;
+            background-color: #fafafa00;
+            border: none;
+            border-radius: 5px;
+            padding: 15px 30px;
+            margin: 10px 30px 0 30px;
+            a{
+                text-decoration: none;
+                font-family: 'Arvo', serif;
+                font-size: 1.3rem;
+            }
+        }
+
+        .log{
+            a{
+                color: rgb(1, 95, 1);
+            }
+            border-bottom: 2px solid rgb(1, 95, 1);
+        }
+        .reg{
+            a{
+                color: rgb(95, 1, 75);
+            }
+            border-bottom: 2px solid rgb(95, 1, 75);
+        }
+
+        .btn:active {
+            border-radius: 15px;
+            transform: translateY(4px);
+        }
+    }
+
+}
+
+#footer{
+    width: 100%;
+    height: max-content;
+    padding: 30px 0;
+    background-color: rgba(0, 0, 0, 0.637);
+    ul{
+        display: flex;
+        flex: {
+            direction: row;
+            wrap: wrap;
+        }
+        justify-content: center;
+        li{
+            list-style: none;
+            margin: 10px 15px;
+            a{
+                text-decoration: none;
+                color: #ffffff
+            }
+        }
+    }
+    text-align: center;
+}
+
+/*========================================================================================================================/
+/=========================================================================================================================/
+/========================================================================================================================*/
+
+
+
+@media screen and (max-width: 768px) {
+    #nav{
+        position:fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.7582);
+        ul{
+            flex-direction: column;
+            height: 100%;
+            li{
+                padding: {
+                    right: 10px;
+                    left: 10px;
+                    bottom: 10px;
+                }
+                border-bottom: 1px solid #FFF;
+            }
+        }
+        transition: cubic-bezier(0,1.21,.85,.47) 1400ms;
+        z-index: 100;
+    }
+    .toggle{
+        display: block;
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: 50px;
+        height: 50px;
+        background: #b6b6b6f5;
+        border-radius: 10px;
+        cursor: pointer;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 200;
+        .active{
+            background: #7a7a7a4d;
+            color: #000;
+        }
+    
+        ion-icon{
+            position: absolute;
+            color: #F3F3F3;
+            font-size: 34px;
+            display: none;
+        }
+    }
+
+    ion-icon.open,
+    .active ion-icon.close{
+        display: none;
+    }
+
+    .active ion-icon.open,
+    ion-icon.close{
+        display: block;
+    }
+
+    .show{
+        transform: translatey(-1400px);
+        transition: cubic-bezier(0,1.21,.85,.47) 1400ms;
+        z-index: 50;
+    }
+
+    #bg-presentation{
+        .bg-not{
+            display: none;
+        }
+        .bg-res{
+            display: block;
+            position: relative;
+            width: 100%;
+            background-size:auto;
+            height: 100vh;
+        }
+    
+        .line-1{
+            font-size: 230%;
+        }
+        
+
+        .btn-redirect{
+            p{
+                font-size: 1.1rem;
+            }
+            
+            .btn{
+                a{
+                    font-size: 0.85rem;
+                }
+            }
+
+            .buttons{
+                flex-direction: column;
+            }
+        }
+
+    }
+
+}
