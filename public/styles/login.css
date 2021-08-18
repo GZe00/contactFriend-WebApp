@@ -1,0 +1,466 @@
+/* @import "/public/styles/login.css";
+@import "/public/styles/footer.css";
+*/
+/*Nav*/
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+/*title-main*/
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro");
+/*intro*/
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@1,300&display=swap");
+/*btn*/
+@import url("https://fonts.googleapis.com/css2?family=Arvo&family=Crimson+Pro:ital,wght@1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #FBFBFB;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+
+:hover {
+  cursor: default;
+}
+
+button {
+  font-weight: 400;
+  font-weight: bold;
+  font-family: 'Andada Pro', serif;
+  background-color: #FFFFFF00;
+  padding: 7px 17px;
+  border: none;
+  border-bottom: 2px solid #000;
+  margin: 0 15px;
+}
+
+button:hover {
+  background-color: rgba(62, 142, 65, 0);
+  cursor: pointer;
+}
+
+button:active {
+  border-radius: 50%;
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
+a {
+  font-weight: 500;
+  font-family: 'Andada Pro', serif;
+  color: #1877F2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+input {
+  padding: 0.4rem;
+  margin: 3px 0;
+}
+
+input:hover {
+  cursor: auto;
+}
+
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+:focus {
+  outline: none;
+}
+
+/*========================================================================================================================/
+/=========================================================================================================================/
+/========================================================================================================================*/
+#nav {
+  position: relative;
+  height: 7vh;
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 100;
+}
+
+#nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  height: 100%;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#nav ul li {
+  list-style: none;
+  -webkit-transition: ease 300ms;
+  transition: ease 300ms;
+}
+
+#nav ul li a {
+  text-decoration: none;
+  color: #FFF;
+}
+
+#nav ul li:hover {
+  -webkit-transform: scale(2);
+          transform: scale(2);
+  -webkit-transition: ease 300ms;
+  transition: ease 300ms;
+}
+
+.toggle {
+  display: none;
+}
+
+#bg-presentation {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /*========================================= Effect =========================================*/
+}
+
+#bg-presentation .bg-res {
+  display: none;
+}
+
+#bg-presentation .bg-not {
+  position: relative;
+  width: 100%;
+  background-size: auto;
+  height: 100vh;
+}
+
+#bg-presentation .container-login {
+  position: relative;
+  top: -70%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+#bg-presentation .container-login p {
+  margin-bottom: 20px;
+  font-family: 'Crimson Pro', serif;
+  font-size: 2rem;
+}
+
+#bg-presentation .container-login h2 {
+  margin: 10px 0 20px 0;
+  font-family: 'STIX Two Text', serif;
+}
+
+#bg-presentation .container-login .logo {
+  position: relative;
+  top: 0;
+  width: 300px;
+}
+
+#bg-presentation .container-login .tittle {
+  text-align: center;
+}
+
+#bg-presentation .container-login .login {
+  text-align: center;
+}
+
+#bg-presentation .container-login .login .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: start;
+}
+
+#bg-presentation .container-login .login .form .pass,
+#bg-presentation .container-login .login .form .email {
+  position: relative;
+}
+
+#bg-presentation .container-login .login .form .pass .effect,
+#bg-presentation .container-login .login .form .email .effect {
+  border: 1px solid #ccc;
+  padding: 7px 14px 9px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#bg-presentation .container-login .login .btn-log {
+  margin: 25px 0;
+}
+
+#bg-presentation .container-login .login .btn-log .on {
+  color: #2a9400;
+  font-size: 1rem;
+  border-bottom: 2px solid #2a9400;
+}
+
+#bg-presentation .container-login .login .btn-log .reset {
+  color: #940000;
+  font-size: 1rem;
+  border-bottom: 2px solid #940000;
+}
+
+#bg-presentation .container-login .login .a-log a {
+  margin: 0 10px;
+}
+
+#bg-presentation .effect ~ .focus-border:before,
+#bg-presentation .effect ~ .focus-border:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+#bg-presentation .blue ~ .focus-border:before,
+#bg-presentation .blue ~ .focus-border:after {
+  background-color: #2a9400;
+}
+
+#bg-presentation .red ~ .focus-border:before,
+#bg-presentation .red ~ .focus-border:after {
+  background-color: #ff3333;
+}
+
+#bg-presentation .effect ~ .focus-border:after {
+  top: auto;
+  bottom: 0;
+  right: auto;
+  left: 0;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+#bg-presentation .effect ~ .focus-border i:before,
+#bg-presentation .effect ~ .focus-border i:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#bg-presentation .blue ~ .focus-border i:before,
+#bg-presentation .blue ~ .focus-border i:after {
+  background-color: #2a9400;
+}
+
+#bg-presentation .red ~ .focus-border i:before,
+#bg-presentation .red ~ .focus-border i:after {
+  background-color: #ff3333;
+}
+
+#bg-presentation .effect ~ .focus-border i:after {
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: 0;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+#bg-presentation .effect:focus ~ .focus-border:before,
+#bg-presentation .effect:focus ~ .focus-border:after {
+  width: 100%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+#bg-presentation .effect:focus ~ .focus-border:after {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+#bg-presentation .effect:focus ~ .focus-border i:before,
+#bg-presentation .effect:focus ~ .focus-border i:after {
+  height: 100%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+#bg-presentation .effect:focus ~ .focus-border i:after {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+#footer {
+  width: 100%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  padding: 30px 0;
+  background-color: rgba(0, 0, 0, 0.637);
+  text-align: center;
+}
+
+#footer ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#footer ul li {
+  list-style: none;
+  margin: 10px 15px;
+}
+
+#footer ul li a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/*========================================================================================================================/
+/=========================================================================================================================/
+/========================================================================================================================*/
+@media screen and (max-width: 768px) {
+  #nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.7582);
+    -webkit-transition: cubic-bezier(0, 1.21, 0.85, 0.47) 1400ms;
+    transition: cubic-bezier(0, 1.21, 0.85, 0.47) 1400ms;
+    z-index: 100;
+  }
+  #nav ul {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: 100%;
+  }
+  #nav ul li {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #FFF;
+  }
+  .toggle {
+    display: block;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    background: #b6b6b6f5;
+    border-radius: 10px;
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 200;
+  }
+  .toggle .active {
+    background: #7a7a7a4d;
+    color: #000;
+  }
+  .toggle ion-icon {
+    position: absolute;
+    color: #F3F3F3;
+    font-size: 34px;
+    display: none;
+  }
+  ion-icon.open,
+  .active ion-icon.close {
+    display: none;
+  }
+  .active ion-icon.open,
+  ion-icon.close {
+    display: block;
+  }
+  .show {
+    -webkit-transform: translatey(-1400px);
+            transform: translatey(-1400px);
+    -webkit-transition: cubic-bezier(0, 1.21, 0.85, 0.47) 1400ms;
+    transition: cubic-bezier(0, 1.21, 0.85, 0.47) 1400ms;
+    z-index: 50;
+  }
+  #bg-presentation .bg-not {
+    display: none;
+  }
+  #bg-presentation .bg-res {
+    display: block;
+    position: relative;
+    width: 100%;
+    background-size: auto;
+    height: 100vh;
+  }
+  #bg-presentation .line-1 {
+    font-size: 230%;
+  }
+  #bg-presentation .container-login {
+    top: -85%;
+  }
+  #bg-presentation .container-login .logo {
+    width: 280px;
+    padding: 0 20px;
+  }
+  #bg-presentation .container-login p {
+    font-size: 1.1rem;
+  }
+  #bg-presentation .container-login .form {
+    padding: 0 20px;
+  }
+}
+/*# sourceMappingURL=login.css.map */

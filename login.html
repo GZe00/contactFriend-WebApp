@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="/public/styles/main.css">
+    <link rel="stylesheet" href="/public/styles/login.css">
     <link rel="shortcut icon" href="/public/assets/ico/favicon.png" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Friend</title>
+    <title>Contact Friend: Login</title>
 </head>
 
 <body>
@@ -24,19 +24,39 @@
             <li><a href="#">Ejemplos</a></li>
         </ul>
     </nav>
+
     <div id="bg-presentation">
         <img class="bg-not" src="/public/assets/images/presentation/presentation.png" alt="" srcset="">
         <img class="bg-res" src="/public/assets/images/presentation/presentation-mobile.png" alt="">
-            <p class="line-1 anim-typewriter">Contact Friend</p>
-            <div class="btn-redirect">
-                <p>Una agenda: Todos tus contactos</p>
-                <div class="buttons">
-                    <button class="btn log"><a href="/login.html">Iniciar Sesión </a></button>
-                    <button class="btn reg"><a href="/register.html">Registrarse</a></button>
+        <div class="container-login">
+            <img class="logo" src="/public/assets/images/logo/contact-friend.png" alt="" srcset="">
+            <h2 class="title">Login</h2>
+            <form class="login" action="" onsubmit="return false;">
+                <div class="form">
+                    <div class="email">
+                        <input type="text" class="effect blue" placeholder="Correo Institucional" required>
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                    </div>
+                    <div class="pass">
+                        <input type="password" class="effect red" placeholder="Contraseña" required>
+                        <span class="focus-border">
+                            <i></i>
+                        </span>
+                    </div>
                 </div>
-            </div>
+                <div class="btn-log">
+                    <button class="reset" type="reset">Cancelar</button>
+                    <button class="on" type="submit">Iniciar</button>
+                </div>
+                <div class="a-log">
+                    <a href="./views/pages/recovery.html" target="_blank">¿Olvidaste tu contraseña?</a>
+                    <a href="./views/pages/register.html" target="_blank">Registrarme</a>
+                </div>
+            </form>
+        </div>
     </div>
-
     <footer id="footer">
         <ul>
             <li><a href="#">Acerca de</a></li>
@@ -47,7 +67,6 @@
         <p>©Copyright 2021.</p>
         <p>Design by: Moisés Fuentes</p>
     </footer>
-
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
