@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/public/styles/register.css">
+    <link rel="shortcut icon" href="/public/assets/ico/favicon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Friend: Register</title>
+</head>
+
+<body>
+    <div id="bg-presentation">
+        <img class="bg-not" src="/public/assets/images/presentation/presentation.png" alt="" srcset="">
+        <img class="bg-res" src="/public/assets/images/presentation/presentation-mobile.png" alt="">
+        <div class="container-login">
+            <img class="logo" src="/public/assets/images/logo/contact-friend.png" alt="" srcset="">
+            <h2 class="title">Registro</h2>
+            <form class="form" action="" onsubmit="return false;">
+                <div class="name">
+                    <input type="text" class="effect blue" placeholder="Nombre(s)*" required>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+                <div class="last-name">
+                    <input type="text" class="effect red" placeholder="Apellido(s)">
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+                <div class="control">
+                    <input type="text" class="effect yellow" placeholder="Nombre de usuario*" required>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+                <div class="email">
+                    <input type="email" class="effect blue" name="" id="" placeholder="Correo*" required>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+                <div class="email">
+                    <input type="email" class="effect yellow" name="" id="" placeholder="Confirmar correo*" required>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+                <Label class="birthday">Fecha de Nacimiento: </Label>
+                <input type="date" name="" id="" min="1900-01-01" max="2021-01-01" required>
+                <div class="pass">
+                    <input type="password" class="effect red" placeholder="Constraseña*" required>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+                <div class="confirm-pass">
+                    <input type="password" class="effect red" placeholder="Confirmar contraseña*" required>
+                    <span class="focus-border">
+                        <i></i>
+                    </span>
+                </div>
+
+                <div class="buttons">
+                    <a href="/login.html"><ion-icon name="arrow-back-circle-outline"></ion-icon></a>
+                    <button class="red" type="reset">Cancelar</button>
+                    <button class="green" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+    <script src="/public/js/app.js"></script>
+</body>
+
+</html>

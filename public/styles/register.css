@@ -1,0 +1,418 @@
+/* @import "/public/styles/login.css";
+@import "/public/styles/footer.css";
+*/
+/*Nav*/
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap");
+/*title-main*/
+@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Anonymous+Pro");
+/*intro*/
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@1,300&display=swap");
+/*btn*/
+@import url("https://fonts.googleapis.com/css2?family=Arvo&family=Crimson+Pro:ital,wght@1,300&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+}
+
+:hover {
+  cursor: default;
+}
+
+:focus {
+  outline: none;
+}
+
+button {
+  font-weight: 400;
+  font-weight: bold;
+  font-family: 'Andada Pro', serif;
+  background-color: #FFFFFF00;
+  padding: 7px 17px;
+  border: none;
+  border-bottom: 2px solid #000;
+  padding: 12px 26px;
+  margin: 0 10px;
+  border: none;
+  border-radius: 10px;
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+button:active {
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
+a {
+  font-weight: 500;
+  font-family: 'Andada Pro', serif;
+  color: #1877F2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+input {
+  border-radius: 10px;
+  width: 100%;
+  padding: 0.5rem;
+  margin: 10px 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input:hover {
+  cursor: auto;
+}
+
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+/*========================================================================================================================/
+/=========================================================================================================================/
+/========================================================================================================================*/
+#bg-presentation {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#bg-presentation .bg-res {
+  display: none;
+}
+
+#bg-presentation .bg-not {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  z-index: -1;
+}
+
+#bg-presentation .container-login {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+
+#bg-presentation .container-login p {
+  margin-bottom: 20px;
+  font-family: 'Crimson Pro', serif;
+  font-size: 2rem;
+}
+
+#bg-presentation .container-login h2 {
+  margin: 10px 0 20px 0;
+  font-family: 'STIX Two Text', serif;
+}
+
+#bg-presentation .container-login .logo {
+  position: relative;
+  top: 0;
+  width: 300px;
+}
+
+#bg-presentation .container-login .tittle {
+  text-align: center;
+}
+
+#bg-presentation .container-login .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: start;
+  width: 750px;
+}
+
+#bg-presentation .container-login .form .name,
+#bg-presentation .container-login .form .last-name,
+#bg-presentation .container-login .form .control,
+#bg-presentation .container-login .form .email,
+#bg-presentation .container-login .form .pass,
+#bg-presentation .container-login .form .confirm-pass {
+  position: relative;
+}
+
+#bg-presentation .container-login .form .name .effect,
+#bg-presentation .container-login .form .last-name .effect,
+#bg-presentation .container-login .form .control .effect,
+#bg-presentation .container-login .form .email .effect,
+#bg-presentation .container-login .form .pass .effect,
+#bg-presentation .container-login .form .confirm-pass .effect {
+  border: 1px solid #ccc;
+  padding: 7px 14px 9px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+#bg-presentation .container-login .form .buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#bg-presentation .container-login .form .buttons .red {
+  background-color: #ff000045;
+}
+
+#bg-presentation .container-login .form .buttons .red:hover {
+  background-color: #ff0000a6;
+}
+
+#bg-presentation .container-login .form .buttons .green {
+  background-color: #15ff0045;
+}
+
+#bg-presentation .container-login .form .buttons .green:hover {
+  background-color: #15ff00a6;
+}
+
+#bg-presentation .container-login .form .buttons a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 32px;
+}
+
+#bg-presentation .container-login .form .buttons a ion-icon {
+  color: #000;
+}
+
+#bg-presentation .container-login .form .buttons a ion-icon:hover {
+  cursor: pointer;
+}
+
+/*========================================= Effect =========================================*/
+.effect ~ .focus-border:before,
+.effect ~ .focus-border:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.blue ~ .focus-border:before,
+.blue ~ .focus-border:after {
+  background-color: #2a9400;
+}
+
+.red ~ .focus-border:before,
+.red ~ .focus-border:after {
+  background-color: #ff3333;
+}
+
+.yellow ~ .focus-border:before,
+.yellow ~ .focus-border:after {
+  background-color: #a09d00;
+}
+
+.effect ~ .focus-border:after {
+  top: auto;
+  bottom: 0;
+  right: auto;
+  left: 0;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+.effect ~ .focus-border i:before,
+.effect ~ .focus-border i:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.blue ~ .focus-border i:before,
+.blue ~ .focus-border i:after {
+  background-color: #2a9400;
+}
+
+.red ~ .focus-border i:before,
+.red ~ .focus-border i:after {
+  background-color: #ff3333;
+}
+
+.yellow ~ .focus-border i:before,
+.yellow ~ .focus-border i:after {
+  background-color: #a09d00;
+}
+
+.effect ~ .focus-border i:after {
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: 0;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.effect:focus ~ .focus-border:before,
+.effect:focus ~ .focus-border:after {
+  width: 100%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+.effect:focus ~ .focus-border:after {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.effect:focus ~ .focus-border i:before,
+.effect:focus ~ .focus-border i:after {
+  height: 100%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.effect:focus ~ .focus-border i:after {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+/*========================================================================================================================/
+/=========================================================================================================================/
+/========================================================================================================================*/
+@media screen and (max-width: 768px) {
+  input {
+    width: 100%;
+    border-radius: 5px;
+    padding: 0.3rem;
+    margin: 2px 0;
+  }
+  #bg-presentation .bg-not {
+    display: none;
+  }
+  #bg-presentation .bg-res {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    z-index: -1;
+  }
+  #bg-presentation .container-login {
+    top: 2%;
+  }
+  #bg-presentation .container-login h2 {
+    font-size: 1.4rem;
+  }
+  #bg-presentation .container-login .form {
+    width: 90%;
+  }
+  #bg-presentation .container-login .form .buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 4px;
+  }
+  #bg-presentation .container-login .form .buttons button {
+    margin: 4px 0;
+  }
+  #bg-presentation .container-login .logo {
+    width: 220px;
+    padding: 0 20px;
+  }
+  #bg-presentation .container-login p {
+    font-size: 1.1rem;
+  }
+  #bg-presentation .container-login .form {
+    padding: 0 20px;
+  }
+}
+/*# sourceMappingURL=register.css.map */

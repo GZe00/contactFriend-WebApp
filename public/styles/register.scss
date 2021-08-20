@@ -1,0 +1,389 @@
+/* @import "/public/styles/login.css";
+@import "/public/styles/footer.css";
+*/
+
+/*Nav*/
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+/*title-main*/
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anonymous+Pro');
+
+/*intro*/
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@1,300&display=swap');
+
+/*btn*/
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Crimson+Pro:ital,wght@1,300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: { 
+        // color:#F3F4F6;
+    };
+    height: 100vh;
+}
+
+:hover{
+    cursor: default;
+}
+
+:focus {
+    outline: none;
+}
+
+button{
+    font: {
+        weight: 400;
+        weight: bold;
+        family: 'Andada Pro', serif;
+    }
+    background: {
+        color: #FFFFFF00;
+    }
+    padding: 7px 17px;
+    border: none;
+    border: {
+        bottom: 2px solid #000;
+    }
+    // margin: 0 15px;
+    padding: 12px 26px;
+    margin: 0 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+button:hover {
+    // background-color: rgba(0, 0, 0, 0.384);
+    cursor: pointer;
+}
+
+button:active {
+    transform: translateY(4px);
+}
+
+a{
+    font: {
+        weight: 500;
+        family: 'Andada Pro', serif;
+    }
+    color: #1877F2;
+    text: {
+        decoration: none;
+    }
+}
+
+a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+input{
+    border-radius: 10px;
+    width: 100%;
+    padding: 0.5rem;
+    margin: 10px 0;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input:hover{
+    cursor: auto;
+}
+
+input[type="password"],
+input[type="text"] {
+	width: 100%;
+	box-sizing: border-box;
+
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+/*========================================================================================================================/
+/=========================================================================================================================/
+/========================================================================================================================*/
+
+#bg-presentation{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .bg-res{
+        display: none;
+    }
+
+    .bg-not{
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        background-size: cover;
+        z-index: -1;
+    }
+
+    .container-login{
+        position: relative;
+        display: flex;
+        flex: {
+            direction: column;
+        }
+        justify: {
+            content: center;
+        }
+        align: {
+            items: center;
+        }
+        text: {
+            align: center;
+        }
+        p{
+            margin: {
+                bottom: 20px;
+            }
+            font: {
+                family: 'Crimson Pro', serif;
+                size: 2rem;
+            }
+        }
+        h2{
+            margin: 10px 0 20px 0;
+            font: {
+                family: 'STIX Two Text', serif;
+            }
+        }
+        .logo{
+            position: relative;
+            top: 0;
+            width: 300px;
+        }
+        .tittle{
+            text-align: center;
+        }
+        .form{
+            display: flex;
+            flex-direction: column;
+            text-align: start;
+            width: 750px;
+            .name,
+            .last-name,
+            .control,
+            .email,
+            .pass,
+            .confirm-pass{
+                position: relative;
+                .effect {
+                    border: 1px solid #ccc;
+                    padding: 7px 14px 9px;
+                    transition: 0.4s;
+                }
+            }
+            .buttons{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                .red{
+                    background-color: #ff000045;
+                }
+                .red:hover{
+                    background-color: #ff0000a6;
+                }
+                .green{
+                    background-color: #15ff0045;
+                }
+                .green:hover{
+                    background-color: #15ff00a6;
+                }
+                a{
+                    display: flex;
+                    align-items: center;
+                    font: {
+                        size: 32px
+                    }
+                    ion-icon{
+                        color: #000;
+                    }
+                    ion-icon:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+/*========================================= Effect =========================================*/
+
+.effect~.focus-border:before,
+.effect~.focus-border:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 2px;
+	transition: 0.2s;
+	transition-delay: 0.2s;
+}
+
+.blue~.focus-border:before,
+.blue~.focus-border:after {
+    background-color: #2a9400;
+}
+
+.red~.focus-border:before,
+.red~.focus-border:after {
+    background-color: #ff3333;
+}
+
+.yellow~.focus-border:before,
+.yellow~.focus-border:after {
+    background-color: #a09d00;
+}
+
+
+.effect~.focus-border:after {
+	top: auto;
+	bottom: 0;
+	right: auto;
+	left: 0;
+	transition-delay: 0.6s;
+}
+
+.effect~.focus-border i:before,
+.effect~.focus-border i:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2px;
+	height: 0;
+	transition: 0.2s;
+}
+
+.blue~.focus-border i:before,
+.blue~.focus-border i:after {
+    background-color: #2a9400;
+}
+
+.red~.focus-border i:before,
+.red~.focus-border i:after {
+    background-color: #ff3333;
+}
+
+.yellow~.focus-border i:before,
+.yellow~.focus-border i:after {
+    background-color: #a09d00;
+}
+
+.effect~.focus-border i:after {
+	left: auto;
+	right: 0;
+	top: auto;
+	bottom: 0;
+	transition-delay: 0.4s;
+}
+
+.effect:focus~.focus-border:before,
+.effect:focus~.focus-border:after {
+	width: 100%;
+	transition: 0.2s;
+	transition-delay: 0.6s;
+}
+
+.effect:focus~.focus-border:after {
+	transition-delay: 0.2s;
+}
+
+.effect:focus~.focus-border i:before,
+.effect:focus~.focus-border i:after {
+	height: 100%;
+	transition: 0.2s;
+}
+
+.effect:focus~.focus-border i:after {
+	transition-delay: 0.4s;
+}
+
+/*========================================================================================================================/
+/=========================================================================================================================/
+/========================================================================================================================*/
+
+
+
+
+
+@media screen and (max-width: 768px) {
+
+    input{
+        width: 100%;
+        border-radius: 5px;
+        padding: 0.3rem;
+        margin: 2px 0;
+    }
+
+    #bg-presentation{
+        .bg-not{
+            display: none;
+        }
+        .bg-res{
+            display: block;
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            background: {
+                size: cover;
+            }
+            z-index: -1;
+        }
+        
+        .container-login{
+            h2{
+                font: {
+                    size: 1.4rem;
+                }
+            }
+            top: 2%;
+            .form{
+                width: 90%;
+                .buttons{
+                    display: flex;
+                    flex-direction: column-reverse;
+                    justify-content: center;
+                    align-items: center;
+                    margin-top: 4px;
+                    button{
+                        margin: 4px 0;
+                    }
+                }
+            }
+            .logo{
+                width: 220px;
+                padding: 0 20px;
+            }
+            p{
+                font-size: 1.1rem;
+            }
+            .form{
+                padding: 0 20px;
+            }
+        }
+
+    }
+
+}
