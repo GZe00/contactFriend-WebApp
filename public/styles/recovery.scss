@@ -1,0 +1,211 @@
+
+/*Login text style*/
+@import url('https://fonts.googleapis.com/css2?family=Andada+Pro:wght@400;500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #F2F2F2;
+}
+:hover{
+    cursor: default;
+}
+:focus {
+    outline: none;
+}
+button{
+    font-weight: 400;
+    font-weight: bold;
+    font-family: 'Andada Pro', serif;
+    background-color: #FFFFFF00;
+    padding: 7px 17px;
+    border: none;
+    border-bottom: 2px solid #000;
+}
+button:hover {
+    background-color: rgba(62, 142, 65, 0);
+    cursor: pointer;
+}
+button:active {
+    border-radius: 50%;
+    transform: translateY(4px);
+}
+a{
+    font-weight: 500;
+    font-family: 'Andada Pro', serif;
+    color: #1877F2;
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+input{
+    padding: 0.4rem;
+}
+input:hover{
+    cursor: auto;
+}
+input[type="password"],
+input[type="text"] {
+	width: 100%;
+	box-sizing: border-box;
+
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align: {
+        items: center
+    };
+    justify: {
+        content: center
+    };
+    flex: {
+        direction: column
+    };
+    padding: 40px;
+    background: {
+        image: url(/public/assets/images/presentation/presentation.png);
+        repeat: no-repeat;
+        position: {
+            x: center
+        }
+        size: cover
+    };
+    img {
+        width: 300px
+    }
+    h3 {
+        margin: 20px 0;
+    }
+    .login{
+        text-align: center;
+    }
+    .form{
+        display: flex;
+        flex: {
+            direction: column
+        };
+        text: {
+            alig: start;
+        }
+        .email{
+            position: relative;
+            .effect {
+                border: 1px solid #ccc;
+                padding: 7px 14px 9px;
+                transition: 0.4s;
+            }
+        }
+    }
+    .btn-log{
+        margin: 25px;
+        .on{
+            color: rgb(42, 148, 0);
+            font-size: 1rem;
+            border-bottom: 2px solid rgb(42, 148, 0);
+            margin-left: 15px;
+        }
+    }
+    .a-log{
+        a {
+            margin: 0 10px;
+        }
+    } 
+}
+
+/*========================================= Effect =========================================*/
+
+.effect~.focus-border:before,
+.effect~.focus-border:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 2px;
+	transition: 0.2s;
+	transition-delay: 0.2s;
+}
+.blue~.focus-border:before,
+.blue~.focus-border:after {
+    background-color: #3399FF;
+}
+.effect~.focus-border:after {
+	top: auto;
+	bottom: 0;
+	right: auto;
+	left: 0;
+	transition-delay: 0.6s;
+}
+.effect~.focus-border i:before,
+.effect~.focus-border i:after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 2px;
+	height: 0;
+	transition: 0.2s;
+}
+.blue~.focus-border i:before,
+.blue~.focus-border i:after {
+    background-color: #3399FF;
+}
+.effect~.focus-border i:after {
+	left: auto;
+	right: 0;
+	top: auto;
+	bottom: 0;
+	transition-delay: 0.4s;
+}
+.effect:focus~.focus-border:before,
+.effect:focus~.focus-border:after {
+	width: 100%;
+	transition: 0.2s;
+	transition-delay: 0.6s;
+}
+.effect:focus~.focus-border:after {
+	transition-delay: 0.2s;
+}
+.effect:focus~.focus-border i:before,
+.effect:focus~.focus-border i:after {
+	height: 100%;
+	transition: 0.2s;
+}
+.effect:focus~.focus-border i:after {
+	transition-delay: 0.4s;
+}
+
+@media screen and (max-width: 768px) {
+    .container{
+        background: {
+            image: url(/public/assets/images/presentation/presentation-mobile.png);
+            position: {
+                x: center
+            }
+        }
+
+        h3 {
+            text: {
+                align: center;
+            }
+        }
+
+        .a-log{
+            display: flex;
+            flex: {
+                direction: column;
+            }
+            a {
+                margin: 10px 0;
+            }
+        }
+    }
+}

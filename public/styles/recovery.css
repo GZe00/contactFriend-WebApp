@@ -1,0 +1,244 @@
+/*Login text style*/
+@import url("https://fonts.googleapis.com/css2?family=Andada+Pro:wght@400;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #F2F2F2;
+}
+
+:hover {
+  cursor: default;
+}
+
+:focus {
+  outline: none;
+}
+
+button {
+  font-weight: 400;
+  font-weight: bold;
+  font-family: 'Andada Pro', serif;
+  background-color: #FFFFFF00;
+  padding: 7px 17px;
+  border: none;
+  border-bottom: 2px solid #000;
+}
+
+button:hover {
+  background-color: rgba(62, 142, 65, 0);
+  cursor: pointer;
+}
+
+button:active {
+  border-radius: 50%;
+  -webkit-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
+a {
+  font-weight: 500;
+  font-family: 'Andada Pro', serif;
+  color: #1877F2;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+input {
+  padding: 0.4rem;
+}
+
+input:hover {
+  cursor: auto;
+}
+
+input[type="password"],
+input[type="text"] {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 40px;
+  background-image: url(/public/assets/images/presentation/presentation.png);
+  background-repeat: no-repeat;
+  background-position-x: center;
+  background-size: cover;
+}
+
+.container img {
+  width: 300px;
+}
+
+.container h3 {
+  margin: 20px 0;
+}
+
+.container .login {
+  text-align: center;
+}
+
+.container .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-alig: start;
+}
+
+.container .form .email {
+  position: relative;
+}
+
+.container .form .email .effect {
+  border: 1px solid #ccc;
+  padding: 7px 14px 9px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.container .btn-log {
+  margin: 25px;
+}
+
+.container .btn-log .on {
+  color: #2a9400;
+  font-size: 1rem;
+  border-bottom: 2px solid #2a9400;
+  margin-left: 15px;
+}
+
+.container .a-log a {
+  margin: 0 10px;
+}
+
+/*========================================= Effect =========================================*/
+.effect ~ .focus-border:before,
+.effect ~ .focus-border:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0;
+  height: 2px;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.blue ~ .focus-border:before,
+.blue ~ .focus-border:after {
+  background-color: #3399FF;
+}
+
+.effect ~ .focus-border:after {
+  top: auto;
+  bottom: 0;
+  right: auto;
+  left: 0;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+.effect ~ .focus-border i:before,
+.effect ~ .focus-border i:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.blue ~ .focus-border i:before,
+.blue ~ .focus-border i:after {
+  background-color: #3399FF;
+}
+
+.effect ~ .focus-border i:after {
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: 0;
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.effect:focus ~ .focus-border:before,
+.effect:focus ~ .focus-border:after {
+  width: 100%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-transition-delay: 0.6s;
+          transition-delay: 0.6s;
+}
+
+.effect:focus ~ .focus-border:after {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.effect:focus ~ .focus-border i:before,
+.effect:focus ~ .focus-border i:after {
+  height: 100%;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.effect:focus ~ .focus-border i:after {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    background-image: url(/public/assets/images/presentation/presentation-mobile.png);
+    background-position-x: center;
+  }
+  .container h3 {
+    text-align: center;
+  }
+  .container .a-log {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .container .a-log a {
+    margin: 10px 0;
+  }
+}
+/*# sourceMappingURL=recovery.css.map */
